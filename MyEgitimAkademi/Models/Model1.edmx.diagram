@@ -12,6 +12,11 @@
         <EntityTypeShape EntityType="DbMyPortfolioModel.Project" Width="1.5" PointX="2.75" PointY="3.75" />
         <EntityTypeShape EntityType="DbMyPortfolioModel.sysdiagrams" Width="1.5" PointX="5.375" PointY="3.75" />
         <AssociationConnector Association="DbMyPortfolioModel.FK_Project_Category" />
+        <EntityTypeShape EntityType="DbMyPortfolioModel.Skill" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioModel.Award" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioModel.Address" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioModel.Admin" Width="1.5" PointX="7.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioModel.Contact" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
