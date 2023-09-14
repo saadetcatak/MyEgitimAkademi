@@ -1,0 +1,15 @@
+﻿@model MyEgitimAkademi.Models.Service
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Hizmet Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ServiceID, new { @class = "form-control" })
+    <label>Yetenek İsmi</label>
+    @Html.TextBoxFor(x => x.ServiceName, new { @class = "form-control" }) 
+    <br /><br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>

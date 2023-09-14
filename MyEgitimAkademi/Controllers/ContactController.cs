@@ -33,5 +33,18 @@ namespace MyEgitimAkademi.Controllers
         {
             return PartialView();
         }
+        public ActionResult MessageList()
+        {
+            var values = db.Contact.ToList();
+            return View(values);
+        }
+
+        public ActionResult DeleteMessage(int id)
+        {
+            var value = db.Contact.Find(id);
+            db.Contact.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("MessageList");
+        }
     }
 }

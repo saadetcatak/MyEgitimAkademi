@@ -36,5 +36,7 @@ namespace MyEgitimAkademi.Models
         public virtual DbSet<Address> Address { get; set; }
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }
+        public virtual DbSet<Feature> Feature { get; set; }
+        public virtual DbSet<Partner> Partner { get; set; }
     }
 }

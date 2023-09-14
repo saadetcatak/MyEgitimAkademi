@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyEgitimAkademi.Models;
 
 namespace MyEgitimAkademi.Controllers
 {
     public class RegisterController : Controller
     {
+        DbMyPortfolioEntities db = new DbMyPortfolioEntities();
+
         [HttpGet]
         public ActionResult Index()
         {
@@ -15,9 +18,11 @@ namespace MyEgitimAkademi.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string x)
+        public ActionResult Index(Admin admin)
         {
-            return View();
+            db.Admin.Add(admin);
+            db.SaveChanges();
+            return RedirectToAction("Index","Login");
         }
     }
 }

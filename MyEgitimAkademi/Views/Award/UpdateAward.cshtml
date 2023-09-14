@@ -1,0 +1,21 @@
+﻿@model MyEgitimAkademi.Models.Award
+@{
+    ViewBag.Title = "UpdateAward";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Sertifika Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Sertifika ID</label>
+    @Html.TextBoxFor(x => x.AwardID, new { @class = "form-control" })
+    <br />
+    <label>Sertifika Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Sertifika Açıklaması</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-info">Kaydet</button>
+</form>
+

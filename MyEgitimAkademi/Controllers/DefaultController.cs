@@ -32,7 +32,8 @@ namespace MyEgitimAkademi.Controllers
 
         public PartialViewResult PartialFeature()
         {
-            return PartialView();
+            var value = db.Feature.ToList();
+            return PartialView(value);
         }
 
         public PartialViewResult PartialService()
@@ -61,7 +62,12 @@ namespace MyEgitimAkademi.Controllers
 
         public PartialViewResult PartialPartner()
         {
-            return PartialView();
+            ViewBag.ProjectCount = db.Project.Count();
+            ViewBag.Testimonial = db.Testimonial.Count();
+            ViewBag.PartnerCount = db.Partner.Count();
+            var values = db.Partner.ToList();
+            return PartialView(values);
+            
         }
 
         public PartialViewResult PartialContact()

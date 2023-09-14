@@ -10,6 +10,7 @@ namespace MyEgitimAkademi.Controllers
     public class TestimonialController : Controller
     {
         DbMyPortfolioEntities db = new DbMyPortfolioEntities();
+
         public ActionResult Index()
         {
             var values = db.Testimonial.ToList();
@@ -19,7 +20,6 @@ namespace MyEgitimAkademi.Controllers
         [HttpGet]
         public ActionResult AddTestimonial()
         {
-
             return View();
         }
 
@@ -29,7 +29,6 @@ namespace MyEgitimAkademi.Controllers
             db.Testimonial.Add(testimonial);
             db.SaveChanges();
             return RedirectToAction("Index");
-
         }
 
         public ActionResult DeleteTestimonial(int id)
